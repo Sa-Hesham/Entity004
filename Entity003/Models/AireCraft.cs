@@ -12,7 +12,7 @@ namespace Entity003.Models
 
         public string Model { get; set; } = null!;
         public int  Capcity { get; set; }
-
+        public int AireLineOwnerId { get; set; }
 
         // add crew in Airecraft Table 
         public Crew crewDetails { get; set; } =null!;
@@ -20,7 +20,7 @@ namespace Entity003.Models
 
 
         //aire craft owend by one aire lines
-        public int AireLineOwnerId { get; set; }
+     
         public AireLine? AireLineOwner { get; set; } = null!;
       
     

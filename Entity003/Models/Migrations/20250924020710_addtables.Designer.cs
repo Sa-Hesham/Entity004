@@ -4,6 +4,7 @@ using Entity003.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity003.Models.Migrations
 {
     [DbContext(typeof(AireDbContext))]
-    partial class AireDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250924020710_addtables")]
+    partial class addtables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,18 +86,18 @@ namespace Entity003.Models.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AireLineId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AireLineId"), 1L, 2);
 
                     b.Property<string>("Adress")
                         .IsRequired()
-                        .HasMaxLength(60)
-                        .HasColumnType("nvarchar(60)")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)")
                         .HasColumnName("AireLineAdress");
 
                     b.Property<string>("AireLine_Name")
                         .IsRequired()
-                        .HasMaxLength(60)
-                        .HasColumnType("nvarchar(60)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("ContactPerson")
                         .HasColumnType("nvarchar(max)");
@@ -138,7 +141,7 @@ namespace Entity003.Models.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)")
-                        .HasColumnName("Name");
+                        .HasColumnName("EmployeeName");
 
                     b.Property<string>("Position")
                         .IsRequired()

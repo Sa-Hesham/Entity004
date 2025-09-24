@@ -16,10 +16,11 @@ namespace Entity003.Models
         public int BD_Year { get; set; }  
         public int BD_Month { get; set; }
         public int BD_Day { get; set; }
+        public int AireId { get; set; }
 
 
         //employeeHasmanyQualifications in sperated table
-     
+
         public ICollection<Qualifacion> EmpQualifications { get; set; }=new List<Qualifacion>();
 
 
@@ -30,6 +31,6 @@ namespace Entity003.Models
         
         public AireLine AireLine { get; set; } =null!;
 
-        public int AireId { get; set; }
+
     }
 }

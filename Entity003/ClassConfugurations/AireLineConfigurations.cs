@@ -16,14 +16,14 @@ namespace Entity003.ClassConfugurations
             builder.HasKey(A=>A.AireLineId);
 
             builder.Property(props => props.AireLineId)
-                .UseIdentityColumn(1, 2);
+                .UseIdentityColumn(1, 1);
 
             builder.Property(builder => builder.AireLine_Name)
                 .IsRequired()
-                .HasMaxLength(30);
+                .HasMaxLength(60);
 
             builder.Property(prop=>prop.Adress).HasColumnName("AireLineAdress")
-                .HasMaxLength(30);
+                .HasMaxLength(60);
 
             builder.Property(b => b.ContactPerson).IsRequired(false);
 

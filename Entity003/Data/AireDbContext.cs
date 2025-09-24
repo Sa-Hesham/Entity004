@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Entity003.Data
 {
-    internal class AireDbContext :DbContext
+public class AireDbContext :DbContext
     {
 
         public AireDbContext() : base()
@@ -21,7 +21,7 @@ namespace Entity003.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;database=EgyptAire;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=.;database=EgyptAire01;Trusted_Connection=True;TrustServerCertificate=True");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -18,7 +18,7 @@ namespace Entity003.ClassConfugurations
 
             builder.Property(em=>em.Name)
                 .IsRequired()
-                .HasColumnName("EmployeeName").HasMaxLength(20);
+                .HasColumnName("Name").HasMaxLength(20);
 
             builder.Property(e=>e.Address).HasMaxLength(50) .IsRequired();
 
