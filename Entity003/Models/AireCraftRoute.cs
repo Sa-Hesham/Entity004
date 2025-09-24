@@ -13,13 +13,15 @@ namespace Entity003.Models
         public DateTime Departure { get; set; }
         public DateTime Arrival { get; set; }
         public TimeSpan Duration { get; set; }
-
-
         public int AireCraftId { get; set; }
+        public int RouteId { get; set; }
+
+
+
         public AireCraft AireCraft { get; set; } = null!;
 
 
-        public int RouteId { get; set; }
+     
         public Route Routes { get; set; } = null!;
 
         }

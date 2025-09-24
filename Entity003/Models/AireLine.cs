@@ -10,9 +10,10 @@ namespace Entity003.Models
 {
     public class AireLine
     {
-        public string AireLine_Name { get; set; } = null!;
+       
         public int AireLineId { get; set; }
 
+        public string AireLine_Name { get; set; } = null!;
         public string ? ContactPerson { get; set; } = null!;
 
 

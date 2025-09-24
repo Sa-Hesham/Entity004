@@ -4,6 +4,7 @@ using Entity003.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity003.Models.Migrations
 {
     [DbContext(typeof(AireDbContext))]
-    partial class AireDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250924034908_add range")]
+    partial class addrange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -138,7 +141,7 @@ namespace Entity003.Models.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)")
-                        .HasColumnName("Name");
+                        .HasColumnName("EmployeeName");
 
                     b.Property<string>("Position")
                         .IsRequired()
